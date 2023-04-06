@@ -55,4 +55,4 @@ jobs:
       with:
         image: ${{ steps.build-image.outputs.image }}
         tags: ${{ steps.build-image.outputs.tags }}
-        registry: cr.fredhs.net
+        registry: cr.fredhs.net/fedora
