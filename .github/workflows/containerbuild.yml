@@ -142,42 +142,42 @@ jobs:
         tags: ${{ steps.build-busybox.outputs.tags }}
         registry: cr.fredhs.net/fedora
 
-    - name: Push to GitHub Container Repository
-      id: push-distroless-to-ghcr
+    - name: Push to Harbor Container Repository
+      id: push-distroless-to-harbor
       uses: redhat-actions/push-to-registry@v2
       with:
         image: ${{ steps.build-distroless.outputs.image }}
         tags: ${{ steps.build-distroless.outputs.tags }}
-        registry: ${{ env.REGISTRY }}
+        registry: cr.fredhs.net/fedora
 
-    - name: Push to GitHub Container Repository
-      id: push-httpd-to-ghcr
+    - name: Push to Harbor Container Repository
+      id: push-httpd-to-harbor
       uses: redhat-actions/push-to-registry@v2
       with:
         image: ${{ steps.build-httpd.outputs.image }}
         tags: ${{ steps.build-httpd.outputs.tags }}
-        registry: ${{ env.REGISTRY }}
+        registry: cr.fredhs.net/fedora
 
-    - name: Push to GitHub Container Repository
-      id: push-microdnf-to-ghcr
+    - name: Push to Harbor Container Repository
+      id: push-microdnf-to-harbor
       uses: redhat-actions/push-to-registry@v2
       with:
         image: ${{ steps.build-microdnf.outputs.image }}
         tags: ${{ steps.build-microdnf.outputs.tags }}
-        registry: ${{ env.REGISTRY }}
+        registry: cr.fredhs.net/fedora
 
-    - name: Push to GitHub Container Repository
-      id: push-nginx-to-ghcr
+    - name: Push to Harbor Container Repository
+      id: push-nginx-to-harbor
       uses: redhat-actions/push-to-registry@v2
       with:
         image: ${{ steps.build-nginx.outputs.image }}
         tags: ${{ steps.build-nginx.outputs.tags }}
-        registry: ${{ env.REGISTRY }}
+        registry: cr.fredhs.net/fedora
 
-    - name: Push to GitHub Container Repository
-      id: push-openssl-to-ghcr
+    - name: Push to Harbor Container Repository
+      id: push-openssl-to-harbor
       uses: redhat-actions/push-to-registry@v2
       with:
         image: ${{ steps.build-openssl.outputs.image }}
         tags: ${{ steps.build-openssl.outputs.tags }}
-        registry: ${{ env.REGISTRY }}
+        registry: cr.fredhs.net/fedora
